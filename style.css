@@ -21,7 +21,13 @@ body {
     margin-top: 35%;
     border: 0;
     border-radius: 49px;
+    outline: none;
 }
+.inputStyle:focus {
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 10px #719ece;
+}
+
 .submitStyle {
     display: inline;
     background-color: #0b112c;
