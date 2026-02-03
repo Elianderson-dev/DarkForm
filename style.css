@@ -33,6 +33,7 @@ body {
     flex-direction: row;
     align-items: center;
     margin-top: 2.5em;
+    margin-left: 5em;
 }
 
 .listGroup {
@@ -64,6 +65,7 @@ body {
 .submitStyle {
     background-color: #0b112c;
     padding: 1em 4em;
+    margin-left: 1em;
     text-align: center;
     font-size: 12px;
     font-weight: bold;
@@ -89,6 +91,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
     }
     .inputStyle {
         transform: translateX(0%);
