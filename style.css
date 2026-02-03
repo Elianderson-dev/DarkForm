@@ -15,10 +15,43 @@ body {
     color: #b1b7f1;
 }
 
+
+.cardStyle {
+    font-size: 25px;
+    font-family: envycoder nerd font;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0b112c48;
+    padding: 1em 2em;
+    border: 2px solid #a3a3cf;
+    
+}
+
+.formStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2.5em;
+}
+
+.listGroup {
+    width: 80%;
+    background-color: #413d6b4b;
+    padding: 1em 2em;
+    border: 2px solid #161a2c;
+    border-radius: 15px;
+}
+
+.title {
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+.titleAdd {
+    font-size: 50px;
+}
 .inputStyle {
-    display: inline;
     padding: 0.5em 1em;
-    margin-top: 35%;
     border: 0;
     border-radius: 49px;
     outline: none;
@@ -29,7 +62,6 @@ body {
 }
 
 .submitStyle {
-    display: inline;
     background-color: #0b112c;
     padding: 1em 4em;
     text-align: center;
@@ -51,26 +83,29 @@ body {
     color: #161a2c;
 }
 
-.cardStyle {
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #0b112c48;
-    padding: 1em 2em;
-    border: 2px solid #a3a3cf;
+
+@media (max-width: 500px) {
+    .formStyle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputStyle {
+        transform: translateX(0%);
+        width: 100%;
+    }
+    .submitStyle {
+        transform: translateX(0);
+        justify-content: center;
+    }
 }
 
-.listGroup {
-    width: 80%;
-    background-color: #413d6b4b;
-    padding: 1em 2em;
-    border: 2px solid #161a2c;
-    border-radius: 15px;
+@media (max-width: 350px) {
+    .titleAdd {
+        margin: 0;
+        position: absolute;
+    }
+    .formStyle {
+        margin-top: 5.6em;
+    }
 }
-
-.title {
-    margin-bottom: 0;
-    margin-top: 2em;
-}
-
