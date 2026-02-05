@@ -1,4 +1,5 @@
 body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #373944;
@@ -9,7 +10,7 @@ body {
     background-color: #0b112c;
     padding: 1em 2em;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     font-family: envycoder nerd font;
     color: #b1b7f1;
@@ -56,9 +57,9 @@ body {
     border: 0;
     border-radius: 49px;
     outline: none;
+    transition: 0.5s ease-in-out;
 }
 .inputStyle:focus {
-    transition: 0.5s ease-in-out;
     box-shadow: 0 0 10px #719ece;
 }
 
@@ -83,6 +84,7 @@ body {
 .submitStyle:hover {
     background-position: left;
     color: #161a2c;
+    box-shadow: #719ece 3px 0px 10px 0;
 }
 
 
