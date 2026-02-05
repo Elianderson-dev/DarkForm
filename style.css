@@ -44,6 +44,16 @@ body {
     border: 2px solid #161a2c;
     border-radius: 15px;
 }
+
+.listGroupItem {
+    display: block;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #161a2c;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
 .title {
     margin-bottom: 0;
     margin-top: 2em;
