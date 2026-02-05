@@ -44,7 +44,6 @@ body {
     border: 2px solid #161a2c;
     border-radius: 15px;
 }
-
 .title {
     margin-bottom: 0;
     margin-top: 2em;
@@ -86,7 +85,6 @@ body {
     color: #161a2c;
     box-shadow: #719ece 3px 0px 10px 0;
 }
-
 
 @media (max-width: 500px) {
     .formStyle {
