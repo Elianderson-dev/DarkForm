@@ -16,4 +16,11 @@ form.addEventListener('submit', function(addItem) {
         // Clear input field after writing
         itemInput.value = '';
     }
-});
+}); 
+
+// READ
+
+
+// UPDATE
+
+// DELETE   

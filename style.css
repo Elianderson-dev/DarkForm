@@ -45,6 +45,7 @@ body {
     border-radius: 15px;
 }
 
+/* JS created li elements style */
 .listGroupItem {
     display: block;
     padding: 0.5em 0;
