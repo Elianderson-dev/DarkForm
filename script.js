@@ -30,7 +30,17 @@ form.addEventListener('submit', function(addItem) {
 
 
 // READ 
+function renderItems() {
+    itemsList.innerHTML = '';
 
+    items.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'listGroupItem';
+        li.appendChild(document.createTextNode(item.element));
+        itemsList.appendChild(li);  
+        
+    })
+}       
 // UPDATE
 
 // DELETE   
