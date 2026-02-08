@@ -54,6 +54,28 @@ body {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+.listGroupItem button {
+    margin-left: 1em;
+    padding: 0.2em 0.7em;
+    border: none;
+    border-radius: 100px;
+    background-color: #0b112c;
+    color: #d1dcfc;
+    cursor: pointer;
+    
+    transition: 0.25s ease-in;
+}
+
+.listGroupItem button:hover {
+    background-color: #8686b9;
+    color: #161a2c;
+    box-shadow: #00ddff 0px 3px 0 0;
+}
+.listGroupItem button:active {
+    transition: 0s;
+    box-shadow: none;
+    transform: translateY(2px);
+}
 
 .title {
     margin-bottom: 0;

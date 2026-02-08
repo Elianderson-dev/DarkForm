@@ -1,9 +1,10 @@
+// DOM references
 const itemInput = document.getElementById('addItem');
 const send = document.getElementById('send');
 const form = document.getElementById('form');
 const itemsList = document.getElementById('items');
 
-// Basic structure for in-memory storage
+// In-memory storage for items
 
 let items = [];
 let currentId = 1;
@@ -36,7 +37,22 @@ function renderItems() {
     items.forEach(item => {
         const li = document.createElement('li');
         li.className = 'listGroupItem';
+
         li.appendChild(document.createTextNode(item.element));
+
+        // Edit Button
+        const editBtn = document.createElement('button');
+        editBtn.textContent = 'Edit';
+        editBtn.addEventListener('click', () => editItem(item.id));
+
+        // Delete Button 
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.addEventListener('click', () => deleteItem(item.id));
+
+        li.appendChild(editBtn);
+        li.appendChild(deleteBtn);
+        
         itemsList.appendChild(li);  
         
     })
