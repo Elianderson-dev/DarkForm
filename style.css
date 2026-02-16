@@ -61,6 +61,8 @@ body {
     border-radius: 100px;
     background-color: #0b112c;
     color: #d1dcfc;
+    font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
     
     transition: 0.25s ease-in;
@@ -69,7 +71,7 @@ body {
 .listGroupItem button:hover {
     background-color: #8686b9;
     color: #161a2c;
-    box-shadow: #00ddff 0px 3px 0 0;
+    box-shadow: #87d7e4 0px 3px 0 0;
 }
 .listGroupItem button:active {
     transition: 0s;

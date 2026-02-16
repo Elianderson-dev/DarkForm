@@ -29,8 +29,8 @@ form.addEventListener('submit', function(addItem) {
     }
 }); 
 
-
-// READ 
+// READ
+// In this case, READ is handled by the renderItems function, which displays the current list of items on the page. Whenever an item is added, edited, or deleted, this function is called to update the displayed list accordingly.
 function renderItems() {
     itemsList.innerHTML = '';
 
@@ -58,5 +58,12 @@ function renderItems() {
     })
 }       
 // UPDATE
-
+function editItem(id) {
+    const item = items.find(item => item.id === id);
+    const newText = prompt('Edit item:', item.element);
+    if (newText !== null && newText.trim() !== '') {
+        item.element = newText.trim();
+        renderItems();
+    }
+}
 // DELETE   
