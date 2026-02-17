@@ -55,6 +55,18 @@ body {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+.listGroupItem input {
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 0em 0.7em;
+    background-color: #a3b0dd41;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+
 .listGroupItem button {
     margin-left: 1em;
     padding: 0.2em 0.7em;
