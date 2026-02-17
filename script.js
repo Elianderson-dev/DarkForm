@@ -13,7 +13,7 @@ let currentId = 1;
 form.addEventListener('submit', function(addItem) {
     addItem.preventDefault();
     const newItemText = itemInput.value.trim();
-    if (newItemText !== '') {
+    if (!newItemText) return; {
         
         const item = {
             id: currentId++,
@@ -85,3 +85,7 @@ function startEdit(id, span) {
     });
 }
 // DELETE   
+function deleteItem(id) {
+    items = items.filter(i => i.id !== id);
+    renderItems()
+}
