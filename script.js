@@ -38,18 +38,21 @@ function renderItems() {
         const li = document.createElement('li');
         li.className = 'listGroupItem';
 
-        li.appendChild(document.createTextNode(item.element));
+        // Text
+        const span = document.createElement('span');
+        span.textContent = item.element;
 
         // Edit Button
         const editBtn = document.createElement('button');
         editBtn.textContent = 'Edit';
-        editBtn.addEventListener('click', () => editItem(item.id));
+        editBtn.addEventListener('click', () => startEdit(item.id, span));
 
         // Delete Button 
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
         deleteBtn.addEventListener('click', () => deleteItem(item.id));
 
+        li.appendChild(span);
         li.appendChild(editBtn);
         li.appendChild(deleteBtn);
         
@@ -58,12 +61,27 @@ function renderItems() {
     })
 }       
 // UPDATE
-function editItem(id) {
-    const item = items.find(item => item.id === id);
-    const newText = prompt('Edit item:', item.element);
-    if (newText !== null && newText.trim() !== '') {
-        item.element = newText.trim();
+function startEdit(id, span) {
+    const item = items.find(i => i.id === id);
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = item.element;
+
+    span.replaceWith(input);
+    input.focus(); 
+
+    function finishEdit() {
+        const newText = input.value.trim();
+        if (!newText) return;
+
+        item.element = newText;
         renderItems();
     }
+
+    input.addEventListener("blur", finishEdit);
+    input.addEventListener("keydown", e => {
+        if (e.key === "Enter") finishEdit();
+    });
 }
 // DELETE   
