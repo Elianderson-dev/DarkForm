@@ -13,7 +13,7 @@ let currentId = 1;
 form.addEventListener('submit', function(addItem) {
     addItem.preventDefault();
     const newItemText = itemInput.value.trim();
-    if (!newItemText) return; {
+    if (!newItemText) return;
         
         const item = {
             id: currentId++,
@@ -26,7 +26,6 @@ form.addEventListener('submit', function(addItem) {
         itemInput.value = '';
 
         renderItems();
-    }
 }); 
 
 // READ
